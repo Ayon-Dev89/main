@@ -9,10 +9,11 @@ entity Books :cuid,managed {
 }
 
 entity Authors{
+    key ID : Integer;
     authorName: String(20);
     address:String(50); 
     pincode : Integer;
-    
+
 books : Association to Books ;
 // books : Composition of one Books;
 }
