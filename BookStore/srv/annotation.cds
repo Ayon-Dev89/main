@@ -1,12 +1,10 @@
 using BookStoreService as service from './schema_srv';
 
-
 annotate service.Books with @(
     
     // Selection Fields
     UI.SelectionFields    : [
         title,
-
     ],
 
     // List Report Columns
@@ -21,6 +19,7 @@ annotate service.Books with @(
             Label: 'ISBN',
             Value: isbn,
         },
+
 
     ],
 
@@ -38,6 +37,7 @@ annotate service.Books with @(
                 Label: 'ISBN',
                 Value: isbn,
             },
+            
 
         ],
     },
@@ -50,4 +50,8 @@ annotate service.Books with @(
         Target: '@UI.FieldGroup#GenInfo',
     }, ],
 );
+
+
+    
+
 

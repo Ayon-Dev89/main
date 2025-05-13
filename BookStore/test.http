@@ -1,0 +1,18 @@
+###
+# Get Books data
+###
+GET http://localhost:4004/odata/v4/localhost:4004/odata/v4/BookStoreService/Books/Books
+
+
+###
+# Get Authors data
+###
+GET http://localhost:4004/odata/v4/BookStoreService/Authors
+
+###
+# Create Author
+###
+POST http://localhost:4004/odata/v4/BookStoreService/Authors
+Content-Type: application/json
+
+{"authorName": "J.K.Rowling", "address": " Delhi,India","ID":"B008","pincode":678765}
