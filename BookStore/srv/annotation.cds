@@ -4,7 +4,9 @@ annotate service.Books with @(
     
     // Selection Fields
     UI.SelectionFields    : [
+        author_A_ID,
         title,
+        publisher_P_ID
     ],
 
     // List Report Columns
@@ -18,6 +20,16 @@ annotate service.Books with @(
             $Type: 'UI.DataField',
             Label: 'ISBN',
             Value: isbn,
+        },
+         {
+            $Type: 'UI.DataField',
+            Label: 'Price',
+            Value: price_code,
+        },
+                {
+            $Type: 'UI.DataField',
+            Label: 'Language',
+            Value: Language_code,
         },
 
 
@@ -36,6 +48,26 @@ annotate service.Books with @(
                 $Type: 'UI.DataField',
                 Label: 'ISBN',
                 Value: isbn,
+            },
+              {
+                $Type: 'UI.DataField',
+                Label: 'Price',
+                Value: price_code,
+            },
+                        {
+                $Type: 'UI.DataField',
+                Label: 'Language',
+                Value: Language_code,
+            },
+            {
+                $Type: 'UI.DataField',
+                Label: 'Stock',
+                Value: stock,
+            },
+            {
+                $Type: 'UI.DataField',
+                Label: 'Discount',
+                Value: discount,
             },
             
 

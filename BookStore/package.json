@@ -19,11 +19,36 @@
     "watch-bookstore": "cds watch --open bookstore/webapp/index.html?sap-ui-xx-viewCache=false"
   },
   "cds": {
+    "requires": {
+      "db": "sqlite",
+      "[production]": {
+        "db": "hana"
+      },
+      "[development]": {
+        "auth": {
+          "kind": "mocked",
+          "users": {
+            "ayon@cpg.com": {
+              "password": "12345",
+              "roles": [
+                "admin"
+              ]
+            },
+            "john": {
+              "roles": [
+                "customer"
+              ]
+            }
+          }
+        }
+      }
+    },
     "sql": {
       "native_hana_associations": false
     }
   },
   "sapux": [
+    "app/bookstore",
     "app/bookstore"
   ]
 }

@@ -1,7 +1,7 @@
 ## Application Details
 |               |
 | ------------- |
-|**Generation Date and Time**<br>Tue May 13 2025 05:25:39 GMT+0000 (Coordinated Universal Time)|
+|**Generation Date and Time**<br>Tue May 13 2025 10:03:14 GMT+0000 (Coordinated Universal Time)|
 |**App Generator**<br>SAP Fiori Application Generator|
 |**App Generator Version**<br>1.17.4|
 |**Generation Platform**<br>SAP Business Application Studio|
@@ -9,7 +9,7 @@
 |**Service Type**<br>Local Cap|
 |**Service URL**<br>http://localhost:4004/odata/v4/book-store/|
 |**Module Name**<br>bookstore|
-|**Application Title**<br>Book Store|
+|**Application Title**<br>  Book Store|
 |**Namespace**<br>com.sap.bookstore|
 |**UI5 Theme**<br>sap_horizon|
 |**UI5 Version**<br>1.135.0|
@@ -17,6 +17,7 @@
 |**Enable TypeScript**<br>False|
 |**Add Eslint configuration**<br>False|
 |**Main Entity**<br>Books|
+|**Navigation Entity**<br>reviews|
 
 ## bookstore
 

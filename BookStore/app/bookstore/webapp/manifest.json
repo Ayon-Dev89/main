@@ -13,7 +13,7 @@
     "sourceTemplate": {
       "id": "@sap/generator-fiori:lrop",
       "version": "1.17.4",
-      "toolsId": "e464822a-093f-44c6-af6b-d0950e9f66a2"
+      "toolsId": "1267598f-3b89-496c-8bc3-fdd3e09dcacb"
     },
     "dataSources": {
       "mainService": {
@@ -105,6 +105,11 @@
           "pattern": "Books({key}):?query:",
           "name": "BooksObjectPage",
           "target": "BooksObjectPage"
+        },
+        {
+          "pattern": "Books({key})/reviews({key2}):?query:",
+          "name": "ReviewsObjectPage",
+          "target": "ReviewsObjectPage"
         }
       ],
       "targets": {
@@ -140,7 +145,25 @@
           "options": {
             "settings": {
               "editableHeaderContent": false,
-              "contextPath": "/Books"
+              "contextPath": "/Books",
+              "navigation": {
+                "reviews": {
+                  "detail": {
+                    "route": "ReviewsObjectPage"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "ReviewsObjectPage": {
+          "type": "Component",
+          "id": "ReviewsObjectPage",
+          "name": "sap.fe.templates.ObjectPage",
+          "options": {
+            "settings": {
+              "editableHeaderContent": false,
+              "contextPath": "/Books/reviews"
             }
           }
         }

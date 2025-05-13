@@ -1,8 +1,8 @@
 namespace com.sap.BookStore;
-using {cuid,Language,Currency,managed} from '@sap/cds/common';
+using {Language,Currency,managed} from '@sap/cds/common';
 type ISBN: String(15);
 entity Books :managed {
-    key ID: String(20);
+    key B_ID: String(20);
     title: String(60);
     author: Association to Authors;
     isbn : ISBN;
@@ -10,11 +10,12 @@ entity Books :managed {
     price: Currency;
     discount: Integer;
     publisher: Association to Publishers;
+    Language: Language;
     reviews: Composition of many Reviews on reviews.book = $self;
 }
 
 entity Authors{
-    key ID : String(20);
+    key A_ID : String(20);
     authorName: String(60);
     address:String(50); 
     pincode : Integer;
@@ -23,14 +24,16 @@ entity Authors{
 // books : Association to Books ;
 // books : Composition of one Books;
 }
-entity Publishers : cuid, managed {
+entity Publishers :  managed {
+ key P_ID: String(20);
   name         : String(100);
   location     : String(100);
   books        : Association to many Books on books.publisher = $self;
 }
 
 // Reviews
-entity Reviews : cuid, managed {
+entity Reviews :  managed {
+ key R_ID: String(20);
   rating       : Integer;
   comment      : String;
   reviewer     : String;
