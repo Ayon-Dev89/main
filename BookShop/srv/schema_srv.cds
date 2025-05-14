@@ -1,6 +1,6 @@
 using {com.sap.bookshop as db} from '../db/schema';
-service BookStoreService  {
-    // @odata.draft.enabled
+service BookShopService  {
+    @odata.draft.enabled
     entity Books as projection on db.Books;
     entity Authors as projection on db.Authors;
     entity Reviews     as projection on db.Reviews;
@@ -11,15 +11,15 @@ service BookStoreService  {
     function getPopularBook() returns Books;
     
 }
-service CustomerService {
-    @readonly
-    entity Books      as projection on db.Books;
+// service CustomerService {
+//     @readonly
+//     entity Books      as projection on db.Books;
     
-    @readonly
-    entity Authors     as projection on db.Authors;
+//     @readonly
+//     entity Authors     as projection on db.Authors;
     
-    entity Reviews     as projection on db.Reviews;
-     @readonly
-    entity Publishers  as projection on db.Publishers;
+//     entity Reviews     as projection on db.Reviews;
+//      @readonly
+//     entity Publishers  as projection on db.Publishers;
 
-}
+// }

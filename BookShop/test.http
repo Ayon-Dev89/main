@@ -15,7 +15,7 @@ GET http://localhost:4004/odata/v4/book-shop/Authors
 POST http://localhost:4004/odata/v4/book-shop/Authors
 Content-Type: application/json
 
-{"authorName": "J.K.Rowling", "address": " Delhi,India","ID":"B008","pincode":678765}
+{"authorName": "J.K.Rowling", "address": "France","A_ID":"4","pincode":678765}
 
 
 # ###
